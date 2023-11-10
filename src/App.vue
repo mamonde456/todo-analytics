@@ -5,6 +5,11 @@ import type { Fragment } from "vue/jsx-runtime";
 
 <template>
   <Fragment>
+    <div class="bg"></div>
+    <div class="overlay"></div>
+    <div class="main-wrapper">
+      <span class="main-title">Hello, To-Do</span>
+    </div>
     <header>
       <div class="wrapper">
         <nav>
@@ -19,24 +24,18 @@ import type { Fragment } from "vue/jsx-runtime";
 
 <style scoped>
 header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+  /* margin: 0 auto; */
+  display: flex;
+  justify-content: center;
 }
 
 nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
+  font-size: 16px;
 }
 
 nav a.router-link-exact-active {
-  color: hsla(160, 100%, 37%, 1);
+  color: rgb(54, 255, 188);
+  font-weight: var(--basic-black);
 }
 
 nav a.router-link-exact-active:hover {
@@ -58,7 +57,7 @@ nav a:first-of-type {
   header {
     display: flex;
     place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+    /* padding-right: calc(var(--section-gap) / 2); */
   }
 
   .logo {
