@@ -1,0 +1,125 @@
+/* CreateTodo Component */
+.todo-form-wrapper {
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.todo-form {
+  width: 450px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+.todo-form > label {
+  width: 100%;
+}
+.todo-input {
+  width: 100%;
+  height: 40px;
+  border: solid 1px #ddd;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.todo-content {
+  height: 60px;
+  border-radius: 30px;
+}
+
+.todo-select {
+  height: 38px;
+  background: #fff;
+  border-radius: 20px 4px 4px 20px;
+  border: solid 1px #ddd;
+  box-sizing: border-box;
+  padding: 8px;
+  position: absolute;
+  left: 0px;
+  top: 0;
+}
+
+.date-picker {
+  position: absolute;
+  left: 40px;
+}
+.dp__main {
+  width: 82% !important;
+}
+.dp__input {
+  border-radius: 4px 20px 20px 4px !important;
+}
+.todo-btn-wrapper {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+.todo-btn {
+  width: 100%;
+  height: 40px;
+  background: rgb(54, 255, 188);
+  border: solid 1px #ddd;
+  border-radius: 20px;
+  box-shadow: 8px 5px 5px 2px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+/* Todo Component */
+
+.todo-wrapper {
+  max-width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  position: relative;
+}
+
+.todo {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.todo > span {
+  border-radius: 10px;
+  color: rgb(41, 41, 41);
+  padding: 5px;
+}
+
+.blue {
+  background-color: rgba(179, 228, 255, 0.906);
+}
+
+.yellow {
+  background-color: rgba(254, 255, 179, 0.926);
+}
+
+.aquamarine {
+  background-color: rgba(127, 255, 212, 0.863);
+}
+
+@media (max-width: 1024px) {
+  .todo-form {
+    width: 70%;
+  }
+}
+@media (max-width: 800px) {
+  /* .todo-form {
+    width: 100%;
+  } */
+  .todo-wrapper {
+    width: 100%;
+    display: block;
+  }
+  .todo {
+    /* width: 100%; */
+  }
+  .update-form-container {
+    width: 100%;
+    /* display: flex; */
+  }
+}
