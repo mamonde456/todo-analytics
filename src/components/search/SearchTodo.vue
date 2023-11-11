@@ -25,7 +25,6 @@ export default {
       }
     },
     handleStatus() {
-      console.log(this.todo);
       const statusType: { [key in Status]: string } = {
         진행전: "yellow",
         진행중: "blue",

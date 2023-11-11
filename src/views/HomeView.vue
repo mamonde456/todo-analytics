@@ -64,7 +64,6 @@ export default {
   },
   computed: {
     handleCategoryChange() {
-      console.log(this.$store.state.category);
       return this.$store.state.category;
     },
     validateFormData() {
@@ -101,7 +100,6 @@ export default {
       return this.$store.state.dummyData.todoList;
     },
     getSearchList(searchList: TodoList[]) {
-      console.log(searchList);
       this.searchList = searchList;
     },
     getIsUpdate(isUpdate: boolean) {

@@ -82,10 +82,8 @@ export default createStore({
       newTodo: TodoList | TodoList[]
     ) {
       if (Array.isArray(newTodo)) {
-        console.log("test");
         commit("UPDATE_TODOLIST", newTodo);
       } else {
-        console.log("test1");
         commit("CREATE_TODOLIST", newTodo);
       }
     },
