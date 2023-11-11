@@ -18,7 +18,6 @@
     <button class="search-btn" type="submit" aria-label="Search">
       <search-icon />
     </button>
-    <!-- <input type="submit" value="search" /> -->
   </form>
 </template>
 
@@ -72,17 +71,18 @@ export default {
     },
     handleSearchSubmit() {
       this.$store.commit("SET_CATEGORY", this.category);
-      const searchList = this.todoList.filter((todo: TodoList) => {
-        if (this.category === "제목") {
-          return todo.title.includes(this.keyword);
-        } else if (this.category === "설명") {
-          return todo.content.includes(this.keyword);
-        } else if (this.category === "상태") {
-          return todo.status.includes(this.keyword);
-        } else if (this.category === "날짜") {
+      const categoryType = {
+        제목: (todo: TodoList) => todo.title.includes(this.keyword),
+        설명: (todo: TodoList) => todo.content.includes(this.keyword),
+        상태: (todo: TodoList) => todo.status.includes(this.keyword),
+        날짜: (todo: TodoList) => {
           const stringDate = this.handleDateChange(todo.date);
           return stringDate?.includes(this.keyword);
-        }
+        },
+      };
+      const searchList = this.todoList.filter((todo: TodoList) => {
+        if (categoryType[this.category])
+          return categoryType[this.category](todo);
       });
       this.$emit("getSearchList", searchList);
     },
