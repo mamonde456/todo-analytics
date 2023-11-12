@@ -34,7 +34,6 @@ export default {
     },
     handleDateChange() {
       return (date: any) => {
-        console.log(date);
         if (!date) return;
         if (date[1]) {
           return `${dayjs(date[0]).format("YYYY-MM-DD")} ~ ${dayjs(
